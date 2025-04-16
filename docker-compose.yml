@@ -4,11 +4,11 @@ services:
   php:
     build:
       context: .
-      dockerfile: Dockerfile.php
+      dockerfile: DockerFile
     ports:
       - "8080:80"
     volumes:
-      - ./src:/var/www/html
+      - ./:/var/www/html
     depends_on:
       - postgres
     environment:
